@@ -1,8 +1,6 @@
-import 'dart:io';
-
 import 'package:bloc/bloc.dart';
-import 'package:f_bloc/app.dart';
-import 'package:f_bloc/counter_observer.dart';
+import 'package:f_bloc/counter/app.dart';
+import 'package:f_bloc/counter/counter_observer.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 
@@ -14,6 +12,5 @@ void main() {
   });
 
   Bloc.observer = CounterObserver();
-  Logger('main').info('test logger');
   runApp(const CounterApp());
 }
