@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../counter.dart';
 
 class CounterView extends StatelessWidget {
+  const CounterView({Key? key}): super(key: key);
   @override
   Widget build(BuildContext context) {
     final _textTheme = Theme.of(context).textTheme;
