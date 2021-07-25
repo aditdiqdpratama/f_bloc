@@ -1,4 +1,5 @@
 import 'package:f_bloc/counter/counter.dart';
+import 'package:f_bloc/timer/timer.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 
@@ -18,29 +19,30 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Bloc App',
-        home: Center(
-            child: DefaultTabController(
+      title: 'Bloc App',
+      home: Center(
+        child: DefaultTabController(
           length: 2,
           child: Scaffold(
-              appBar: AppBar(
-                flexibleSpace: const TabBar(tabs: [
-                  Tab(
-                    child: Text('Counter'),
-                  ),
-                  Tab(
-                    child: Text('2'),
-                  )
-                ]),
-              ),
-              body: const TabBarView(
-                children: [
-                  CounterPage(),
-                  Center(
-                    child: Text('2'),
-                  )
-                ],
-              )),
-        )));
+            appBar: AppBar(
+              flexibleSpace: const TabBar(tabs: [
+                Tab(
+                  child: Text('Counter'),
+                ),
+                Tab(
+                  child: Text('Timer'),
+                )
+              ]),
+            ),
+            body: const TabBarView(
+              children: [
+                CounterPage(),
+                TimerPage(),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

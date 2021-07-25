@@ -1,6 +1,6 @@
 # f_bloc
 
-A new Flutter project.
+Flutter BLOC Example
 
 ## Getting Started
 
