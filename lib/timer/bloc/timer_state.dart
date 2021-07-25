@@ -28,9 +28,6 @@ class TimerRunInProgress extends TimerState {
 
   @override
   String toString() => 'TimerRunInProgress { duration: $duration }';
-
-  @override
-  List<Object> get props => [];
 }
 
 class TimerRunComplete extends TimerState {
