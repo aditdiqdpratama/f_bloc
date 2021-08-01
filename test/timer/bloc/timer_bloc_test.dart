@@ -2,6 +2,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:f_bloc/timer/ticker.dart';
 import 'package:f_bloc/timer/timer.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
 
 void main() {
   group('TimerBloc', () {
