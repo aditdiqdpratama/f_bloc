@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:f_bloc/posts/models/post.dart';
 import 'package:http/http.dart' as http;
+import 'package:rxdart/rxdart.dart';
 
 part 'post_event.dart';
 part 'post_state.dart';
@@ -20,6 +21,16 @@ class PostBloc extends Bloc<PostEvent, PostState> {
     if (event is PostFetched) {
       yield await _mapPostFetchedToState(state);
     }
+  }
+
+  @override
+  Stream<Transition<PostEvent, PostState>> transformEvents(
+      Stream<PostEvent> events,
+      TransitionFunction<PostEvent, PostState> transitionFn) {
+    return super.transformEvents(
+      events.throttleTime(const Duration(milliseconds: 500)),
+      transitionFn,
+    );
   }
 
   Future<PostState> _mapPostFetchedToState(PostState state) async {
