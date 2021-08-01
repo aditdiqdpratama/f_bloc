@@ -39,6 +39,7 @@ dependencies:
   logging: ^1.0.1
   equatable: ^2.0.3
   rxdart: ^0.27.1
+  http: ^0.13.3
 
 dev_dependencies:
   flutter_test:
