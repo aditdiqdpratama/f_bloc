@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:f_bloc/counter/counter.dart';
+import 'package:f_bloc/posts/view/post_page.dart';
 import 'package:f_bloc/timer/timer.dart';
 import 'package:f_bloc/utils/app_observer.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class App extends StatelessWidget {
       title: 'Bloc App',
       home: Center(
         child: DefaultTabController(
-          length: 2,
+          length: 3,
           child: Scaffold(
             appBar: AppBar(
               flexibleSpace: const TabBar(tabs: [
@@ -34,6 +35,9 @@ class App extends StatelessWidget {
                 ),
                 Tab(
                   child: Text('Timer'),
+                ),
+                Tab(
+                  child: Text('Infinity List'),
                 )
               ]),
             ),
@@ -41,6 +45,7 @@ class App extends StatelessWidget {
               children: [
                 CounterPage(),
                 TimerPage(),
+                PostPage(),
               ],
             ),
           ),

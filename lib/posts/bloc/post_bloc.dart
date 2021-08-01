@@ -2,9 +2,10 @@ import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:f_bloc/posts/models/post.dart';
 import 'package:http/http.dart' as http;
 import 'package:rxdart/rxdart.dart';
+
+import '../post.dart';
 
 part 'post_event.dart';
 part 'post_state.dart';
