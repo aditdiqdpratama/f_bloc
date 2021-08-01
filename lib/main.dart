@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:f_bloc/counter/counter.dart';
-import 'package:f_bloc/observer.dart';
 import 'package:f_bloc/timer/timer.dart';
+import 'package:f_bloc/utils/app_observer.dart';
 import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 
@@ -12,7 +12,7 @@ void main() {
     print(
         '${event.loggerName} ${event.level.name}: ${event.time} ${event.message}');
   });
-  Bloc.observer = Observer();
+  Bloc.observer = AppObserver();
   runApp(const App());
 }
 
